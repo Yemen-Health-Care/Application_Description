@@ -49,7 +49,7 @@
 #### Future Vision:
    This application represents the first phase of a larger open-source health ecosystem tailored to the Yemeni healthcare system. The ecosystem will grow through interconnected tools, creating a unified and resilient healthcare infrastructure for the nation.
 
-[Link to the integrated health system feasibility study](https://github.com/Emran025/Health-Care-System)
+[Link to the integrated health system feasibility study](https://github.com/Yemen-Health-Care/OrganizationVision)
 
 ---
 <div dir="rtl">
@@ -105,7 +105,7 @@
    يمثل هذا التطبيق المرحلة الأولى من منظومة صحية مفتوحة المصدر ومصممة خصيصًا لتلبية احتياجات الرعاية الصحية في اليمن. ومع توسع هذه المنظومة بأدوات مترابطة إضافية، سيُسهم ذلك في بناء بنية تحتية صحية موحدة ومستدامة لمستقبل اليمن.
 
 
-[رابط دراسة جدوى المنظومة الصحية المتكاملة](https://github.com/Emran025/Health-Care-System)
+[رابط دراسة جدوى المنظومة الصحية المتكاملة](https://github.com/Yemen-Health-Care/OrganizationVision)
 
 ---
 </div>
