@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Omnifood — Never cook again!</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Icons -->
+  <script
+    type="module"
+    src="https://unpkg.com/ionicons@7.2.2/dist/ionicons/ionicons.esm.js"
+  ></script>
+  <script
+    nomodule
+    src="https://unpkg.com/ionicons@7.2.2/dist/ionicons/ionicons.js"
+  ></script>
+
+  <!-- Main stylesheet -->
+  <link rel="stylesheet" href="css/style.css" />
+ </head>
+ <body>
+  <!-- ================================= HEADER ================================= -->
+  <header class="header container">
+   <a href="#" class="logo">
+    <img src="assets/logos/logo.svg" alt="Omnifood logo" />
+   </a>
+
+   <!-- Mobile nav toggle -->
+   <button class="btn-mobile-nav" aria-label="Toggle navigation">
+    <ion-icon class="icon-mobile-nav" name="menu-outline"></ion-icon>
+    <ion-icon class="icon-mobile-nav" name="close-outline"></ion-icon>
+   </button>
+
+   <nav class="main-nav" aria-label="Primary">
+    <ul class="main-nav-list">
+     <li><a class="main-nav-link" href="#how">How it works</a></li>
+     <li><a class="main-nav-link" href="#meals">Meals</a></li>
+     <li><a class="main-nav-link" href="#testimonials">Testimonials</a></li>
+     <li><a class="main-nav-link" href="#pricing">Pricing</a></li>
+     <li><a class="main-nav-link nav-cta" href="#cta">Try for free</a></li>
+    </ul>
+   </nav>
+  </header>
+
+  <main>
+   <!-- =============================== HERO =============================== -->
+   <section class="section-hero" id="hero">
+    <div class="hero container grid grid--2-cols">
+     <div class="hero-text-box">
+      <h1 class="heading-primary">
+       A healthy meal delivered to your door, every single day
+      </h1>
+      <p class="hero-description">
+       The smart 365-days-per-year food subscription that will make you eat
+       healthy again. Tailored to your personal tastes and nutritional needs.
+       We have delivered <strong>250,000+</strong> meals last year!
+      </p>
+
+      <a href="#cta" class="btn btn--full margin-right-sm">Start eating well</a>
+      <a href="#how" class="btn btn--outline">Learn more &darr;</a>
+     </div>
+
+     <div class="hero-img-box">
+      <picture>
+       <source
+        type="image/webp"
+        srcset="https://images.unsplash.com/photo-1600891964599-f61ba0e24092?auto=format&fit=crop&w=1200&q=80" />
+       <img
+        src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092?auto=format&fit=crop&w=800&q=80"
+        class="hero-img"
+        alt="Woman enjoying food, and variety of healthy meals" />
+      </picture>
+     </div>
+    </div>
+   </section>
+
+   <!-- ============================ FEATURED IN =========================== -->
+   <section class="section-featured" aria-label="Featured logos">
+    <div class="container">
+     <p class="featured-heading">As featured in</p>
+     <ul class="logos">
+      <li><img src="assets/logos/techcrunch.png" alt="Techcrunch" /></li>
+      <li><img src="assets/logos/business-insider.png" alt="Business Insider" /></li>
+      <li><img src="assets/logos/the-new-york-times.png" alt="The New York Times" /></li>
+      <li><img src="assets/logos/forbes.png" alt="Forbes" /></li>
+      <li><img src="assets/logos/usa-today.png" alt="USA Today" /></li>
+     </ul>
+    </div>
+   </section>
+
+   <!-- =========================== HOW IT WORKS =========================== -->
+   <section class="section-how" id="how">
+    <div class="container">
+     <span class="subheading">How it works</span>
+     <h2 class="heading-secondary">
+      Your daily dose of health in 3 simple steps
+     </h2>
+
+     <div class="step grid grid--2-cols">
+      <!-- STEP 01 -->
+      <div class="step-text-box">
+       <p class="step-number">01</p>
+       <h3 class="heading-tertiary">Tell us what you like (and what not)</h3>
+       <p class="step-description">
+        Never again waste time thinking about what to eat! Omnifood AI will
+        create a 100% personalized weekly meal plan just for you. It makes sure
+        you get all the nutrients and vitamins you need, no matter what diet
+        you follow!
+       </p>
+      </div>
+      <div class="step-img-box">
+       <img
+        src="https://images.unsplash.com/photo-1568158870416-e9bcb88e130b?auto=format&fit=crop&w=800&q=80"
+        alt="iPhone app preference selection screen"
+        class="step-img" />
+      </div>
+
+      <!-- STEP 02 -->
+      <div class="step-img-box">
+       <img
+        src="https://images.unsplash.com/photo-1556911220-bff31c812dba?auto=format&fit=crop&w=800&q=80"
+        alt="iPhone app meal approving plan screen"
+        class="step-img" />
+      </div>
+      <div class="step-text-box">
+       <p class="step-number">02</p>
+       <h3 class="heading-tertiary">Approve your weekly meal plan</h3>
+       <p class="step-description">
+        Once per week, approve the meal plan generated for you by Omnifood AI.
+        You can change ingredients, swap entire meals, or even add your own
+        recipes.
+       </p>
+      </div>
+
+      <!-- STEP 03 -->
+      <div class="step-text-box">
+       <p class="step-number">03</p>
+       <h3 class="heading-tertiary">Receive meals at convenient time</h3>
+       <p class="step-description">
+        Best chefs in town will cook your selected meal every day, and we will
+        deliver it to your door whenever works best for you. You can change
+        delivery schedule and address daily!
+       </p>
+      </div>
+      <div class="step-img-box">
+       <img
+        src="https://images.unsplash.com/photo-1481931098730-318b6f776db0?auto=format&fit=crop&w=800&q=80"
+        alt="Delivery rider bringing fresh meal to customer"
+        class="step-img" />
+      </div>
+     </div>
+    </div>
+   </section>
+
+   <!-- Additional sections (Meals, Testimonials, Pricing, CTA) can be added here -->
+  </main>
+
+  <!-- ================================= FOOTER ================================ -->
+  <footer class="footer">© <span id="year"></span> Omnifood. All rights reserved.</footer>
+
+  <script>
+   // Dynamic year in footer
+   document.getElementById("year").textContent = new Date().getFullYear();
+
+   // Mobile navigation toggle
+   const btnNav = document.querySelector(".btn-mobile-nav");
+   const headerEl = document.querySelector(".header");
+   btnNav.addEventListener("click", function () {
+     headerEl.classList.toggle("main-nav-open");
+   });
+  </script>
+ </body>
+</html>
