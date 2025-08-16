@@ -1,0 +1,11 @@
+<!-- Placeholder for hero image -->
+<!-- In production, this would be an actual PNG image -->
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="600" fill="#fdf2e9"/>
+  <text x="400" y="300" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" fill="#e67e22">
+    Hero Image: Woman enjoying healthy food
+  </text>
+  <text x="400" y="340" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#555">
+    (Meals in containers and food bowls)
+  </text>
+</svg>

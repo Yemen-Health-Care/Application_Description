@@ -1,0 +1,7 @@
+<!-- This is a placeholder file for the Omnifood logo -->
+<!-- In a real project, this would be a PNG/SVG image file -->
+<svg width="100" height="40" xmlns="http://www.w3.org/2000/svg">
+  <text x="5" y="25" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#e67e22">
+    Omnifood
+  </text>
+</svg>
