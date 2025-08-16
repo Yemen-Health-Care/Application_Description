@@ -1,0 +1,348 @@
+/* ==========================================================================
+   Global CSS Reset & Variables
+   ========================================================================== */
+
+:root {
+  /* Primary brand */
+  --color-primary-500: #e67e22;
+  --color-primary-700: #cf711f;
+
+  /* Greys */
+  --color-grey-0: #ffffff;
+  --color-grey-50: #fdf2e9;
+  --color-grey-300: #dcdcdc;
+  --color-grey-500: #555;
+  --color-grey-900: #222;
+
+  /* Layout */
+  --border-radius: 9px;
+  --container-width: 120rem; /* 1200px */
+  --gutter-vertical: 9.6rem;
+  --gutter-horizontal: 3.2rem;
+
+  /* Shadows */
+  --shadow-light: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
+  --shadow-medium: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.15);
+}
+
+/* Box-sizing reset */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%; /* 1rem = 10px */
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--color-grey-900);
+}
+
+/* Utility classes */
+.container {
+  max-width: var(--container-width);
+  margin-inline: auto;
+  padding-inline: var(--gutter-horizontal);
+}
+
+.grid {
+  display: grid;
+  column-gap: var(--gutter-horizontal);
+  row-gap: var(--gutter-vertical);
+}
+
+.grid--2-cols {
+  grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
+}
+
+.margin-right-sm {
+  margin-right: 1.6rem !important;
+}
+
+/* Text styles */
+.heading-primary,
+.heading-secondary,
+.heading-tertiary {
+  font-weight: 700;
+  color: inherit;
+  letter-spacing: -0.5px;
+}
+
+.heading-primary {
+  font-size: 5.2rem;
+  line-height: 1.05;
+  margin-bottom: 3.2rem;
+}
+
+.heading-secondary {
+  font-size: 4.4rem;
+  line-height: 1.2;
+  margin-bottom: 8rem;
+}
+
+.heading-tertiary {
+  font-size: 3rem;
+  line-height: 1.2;
+  margin-bottom: 1.6rem;
+}
+
+.subheading {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: var(--color-primary-700);
+  text-transform: uppercase;
+  margin-bottom: 1.6rem;
+  letter-spacing: 1px;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  font-size: 1.8rem;
+  font-weight: 500;
+  padding: 1.6rem 3.2rem;
+  border-radius: var(--border-radius);
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.btn--full {
+  background-color: var(--color-primary-500);
+  color: var(--color-grey-0);
+}
+
+.btn--full:hover,
+.btn--full:active {
+  background-color: var(--color-primary-700);
+}
+
+.btn--outline {
+  background-color: transparent;
+  color: var(--color-grey-900);
+  border: 2px solid var(--color-grey-900);
+}
+
+.btn--outline:hover,
+.btn--outline:active {
+  background-color: var(--color-grey-900);
+  color: var(--color-grey-0);
+}
+
+/* Header */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-block: 2.4rem;
+}
+
+.logo img {
+  height: 2.4rem;
+}
+
+.main-nav-list {
+  list-style: none;
+  display: flex;
+  gap: 3.2rem;
+  align-items: center;
+}
+
+.main-nav-link {
+  text-decoration: none;
+  font-size: 1.8rem;
+  color: var(--color-grey-900);
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.main-nav-link:hover {
+  color: var(--color-primary-700);
+}
+
+.nav-cta {
+  padding: 1.2rem 2.4rem;
+  background-color: var(--color-primary-500);
+  color: var(--color-grey-0) !important;
+  border-radius: var(--border-radius);
+}
+
+.nav-cta:hover {
+  background-color: var(--color-primary-700);
+}
+
+/* Mobile nav toggle */
+.btn-mobile-nav {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.icon-mobile-nav {
+  height: 3.2rem;
+  width: 3.2rem;
+  color: var(--color-grey-900);
+}
+
+/* Hero Section */
+.section-hero {
+  background-color: var(--color-grey-50);
+  padding-block: 9.6rem;
+}
+
+.hero {
+  align-items: center;
+}
+
+.hero-text-box {
+  animation: fade-in-left 0.8s ease-out forwards;
+}
+
+.hero-description {
+  font-size: 2rem;
+  margin-bottom: 4.8rem;
+  line-height: 1.6;
+}
+
+.hero-img {
+  width: 100%;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-light);
+  object-fit: cover;
+}
+
+/* Featured Section */
+.section-featured {
+  padding-block: 4.8rem 3.2rem;
+}
+
+.featured-heading {
+  font-size: 1.4rem;
+  color: var(--color-grey-500);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center;
+  margin-bottom: 2.4rem;
+}
+
+.logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3.2rem;
+  list-style: none;
+  opacity: 0.6;
+  flex-wrap: wrap;
+}
+
+.logos img {
+  height: 2.4rem;
+  filter: grayscale(100%);
+  opacity: 0.8;
+}
+
+/* How it works */
+.section-how {
+  padding-block: var(--gutter-vertical) calc(var(--gutter-vertical) / 2);
+}
+
+.step-number {
+  font-size: 8.6rem;
+  font-weight: 700;
+  color: var(--color-grey-50);
+  margin-bottom: 1.2rem;
+}
+
+.step-description {
+  font-size: 1.8rem;
+  line-height: 1.7;
+}
+
+.step-img-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.step-img {
+  width: 60%;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-light);
+}
+
+/* Footer */
+.footer {
+  padding-block: 4rem;
+  text-align: center;
+  font-size: 1.4rem;
+  color: var(--color-grey-500);
+  border-top: 1px solid var(--color-grey-300);
+}
+
+/* Animations */
+@keyframes fade-in-left {
+  0% {
+    opacity: 0;
+    transform: translateX(-4rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 75em) {
+  html {
+    font-size: 56.25%;
+  }
+}
+
+@media (max-width: 59em) {
+  html {
+    font-size: 50%;
+  }
+
+  .grid--2-cols {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .hero-img {
+    width: 80%;
+  }
+
+  .btn-mobile-nav {
+    display: block;
+  }
+
+  .main-nav-list {
+    position: fixed;
+    inset: 0 0 0 40%;
+    background-color: var(--color-grey-0);
+    flex-direction: column;
+    padding-top: 12rem;
+    transform: translateX(100%);
+    transition: transform 0.4s ease-in;
+  }
+
+  .main-nav-open .main-nav-list {
+    transform: translateX(0);
+  }
+}
+
+@media (max-width: 34em) {
+  .heading-primary {
+    font-size: 4.2rem;
+  }
+}
