@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="نظام إدارة الرعاية الصحية الشامل - تطبيق للمرضى وممثليهم المعينين">
+    <meta name="keywords" content="healthcare, patient management, medical records, appointments, prescriptions">
+    <meta name="author" content="Asceama Healthcare Systems">
+    
+    <title>Asceama - نظام الرعاية الصحية الشامل</title>
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/auth.css">
+    <link rel="stylesheet" href="assets/css/dashboard.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/images/logo.svg">
+</head>
+<body>
+    <!-- Loader -->
+    <div id="loader" class="loader">
+        <div class="loader-content">
+            <div class="logo-container">
+                <img src="assets/images/logo.svg" alt="Asceama Logo" class="loader-logo">
+            </div>
+            <div class="loading-spinner"></div>
+            <p class="loading-text">جاري تحميل النظام...</p>
+        </div>
+    </div>
+
+    <!-- Main App Container -->
+    <div id="app" class="app-container" style="display: none;">
+        <!-- Authentication Pages -->
+        <div id="auth-container" class="auth-container">
+            <!-- Login Page -->
+            <div id="login-page" class="auth-page active">
+                <div class="auth-wrapper">
+                    <div class="auth-card">
+                        <div class="auth-header">
+                            <div class="logo-section">
+                                <img src="assets/images/logo.svg" alt="Asceama" class="auth-logo">
+                                <h1 class="brand-title">Asceama</h1>
+                                <p class="brand-subtitle">نظام الرعاية الصحية الشامل</p>
+                            </div>
+                        </div>
+                        
+                        <div class="auth-content">
+                            <h2 class="auth-title">تسجيل الدخول</h2>
+                            <p class="auth-description">ادخل إلى حسابك للوصول إلى معلوماتك الصحية</p>
+                            
+                            <form id="login-form" class="auth-form">
+                                <div class="form-group">
+                                    <label for="email" class="form-label">البريد الإلكتروني أو رقم الهاتف</label>
+                                    <input type="text" id="email" name="email" class="form-input" required>
+                                    <i class="fas fa-envelope form-icon"></i>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="password" class="form-label">كلمة المرور</label>
+                                    <input type="password" id="password" name="password" class="form-input" required>
+                                    <i class="fas fa-lock form-icon"></i>
+                                    <button type="button" class="password-toggle" onclick="togglePassword('password')">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                </div>
+                                
+                                <div class="form-options">
+                                    <label class="checkbox-container">
+                                        <input type="checkbox" name="remember" id="remember">
+                                        <span class="checkmark"></span>
+                                        تذكرني
+                                    </label>
+                                    <a href="#" class="forgot-link" onclick="showPage('forgot-password-page')">نسيت كلمة المرور؟</a>
+                                </div>
+                                
+                                <button type="submit" class="btn btn-primary btn-full">تسجيل الدخول</button>
+                                
+                                <div class="auth-divider">
+                                    <span>أو</span>
+                                </div>
+                                
+                                <div class="social-login">
+                                    <button type="button" class="btn btn-social btn-google">
+                                        <i class="fab fa-google"></i>
+                                        الدخول بـ Google
+                                    </button>
+                                    <button type="button" class="btn btn-social btn-apple">
+                                        <i class="fab fa-apple"></i>
+                                        الدخول بـ Apple
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                        
+                        <div class="auth-footer">
+                            <p>ليس لديك حساب؟ <a href="#" class="register-link" onclick="showPage('register-page')">إنشاء حساب جديد</a></p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="auth-background">
+                    <div class="background-pattern"></div>
+                    <div class="floating-elements">
+                        <div class="floating-icon" style="top: 10%; left: 15%;">
+                            <i class="fas fa-heartbeat"></i>
+                        </div>
+                        <div class="floating-icon" style="top: 30%; right: 20%;">
+                            <i class="fas fa-stethoscope"></i>
+                        </div>
+                        <div class="floating-icon" style="bottom: 40%; left: 10%;">
+                            <i class="fas fa-pills"></i>
+                        </div>
+                        <div class="floating-icon" style="bottom: 20%; right: 15%;">
+                            <i class="fas fa-user-md"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Register Page -->
+            <div id="register-page" class="auth-page">
+                <!-- Register content will be added here -->
+            </div>
+
+            <!-- Forgot Password Page -->
+            <div id="forgot-password-page" class="auth-page">
+                <!-- Forgot password content will be added here -->
+            </div>
+        </div>
+
+        <!-- Dashboard Container -->
+        <div id="dashboard-container" class="dashboard-container" style="display: none;">
+            <!-- Sidebar -->
+            <nav id="sidebar" class="sidebar">
+                <div class="sidebar-header">
+                    <div class="sidebar-logo">
+                        <img src="assets/images/logo.svg" alt="Asceama" class="sidebar-logo-img">
+                        <span class="sidebar-brand">Asceama</span>
+                    </div>
+                    <button class="sidebar-toggle" onclick="toggleSidebar()">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+                
+                <div class="sidebar-content">
+                    <div class="user-profile">
+                        <div class="user-avatar">
+                            <img src="assets/images/default-avatar.png" alt="صورة المستخدم" class="avatar-img">
+                            <span class="online-indicator"></span>
+                        </div>
+                        <div class="user-info">
+                            <h4 class="user-name">أحمد محمد</h4>
+                            <p class="user-role">مريض</p>
+                        </div>
+                    </div>
+                    
+                    <ul class="sidebar-menu">
+                        <li class="menu-item active">
+                            <a href="#" class="menu-link" onclick="navigateTo('dashboard')">
+                                <i class="fas fa-home"></i>
+                                <span>الرئيسية</span>
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#" class="menu-link" onclick="navigateTo('appointments')">
+                                <i class="fas fa-calendar-check"></i>
+                                <span>المواعيد</span>
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#" class="menu-link" onclick="navigateTo('medical-records')">
+                                <i class="fas fa-file-medical"></i>
+                                <span>السجلات الطبية</span>
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#" class="menu-link" onclick="navigateTo('medications')">
+                                <i class="fas fa-pills"></i>
+                                <span>الأدوية</span>
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#" class="menu-link" onclick="navigateTo('health-search')">
+                                <i class="fas fa-search"></i>
+                                <span>البحث الطبي</span>
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#" class="menu-link" onclick="navigateTo('family-management')">
+                                <i class="fas fa-users"></i>
+                                <span>إدارة الأسرة</span>
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#" class="menu-link" onclick="navigateTo('nutrition')">
+                                <i class="fas fa-apple-alt"></i>
+                                <span>التغذية</span>
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#" class="menu-link" onclick="navigateTo('payments')">
+                                <i class="fas fa-credit-card"></i>
+                                <span>المدفوعات</span>
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#" class="menu-link" onclick="navigateTo('emergency')">
+                                <i class="fas fa-ambulance"></i>
+                                <span>الطوارئ</span>
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#" class="menu-link" onclick="navigateTo('reports')">
+                                <i class="fas fa-chart-line"></i>
+                                <span>التقارير</span>
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#" class="menu-link" onclick="navigateTo('settings')">
+                                <i class="fas fa-cog"></i>
+                                <span>الإعدادات</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="sidebar-footer">
+                    <button class="btn btn-outline" onclick="logout()">
+                        <i class="fas fa-sign-out-alt"></i>
+                        <span>تسجيل الخروج</span>
+                    </button>
+                </div>
+            </nav>
+
+            <!-- Main Content -->
+            <main id="main-content" class="main-content">
+                <!-- Top Header -->
+                <header class="top-header">
+                    <div class="header-left">
+                        <button class="mobile-menu-toggle" onclick="toggleSidebar()">
+                            <i class="fas fa-bars"></i>
+                        </button>
+                        <h1 class="page-title">لوحة التحكم الرئيسية</h1>
+                    </div>
+                    
+                    <div class="header-right">
+                        <div class="header-search">
+                            <input type="text" class="search-input" placeholder="البحث...">
+                            <i class="fas fa-search search-icon"></i>
+                        </div>
+                        
+                        <div class="header-notifications">
+                            <button class="notification-btn" onclick="toggleNotifications()">
+                                <i class="fas fa-bell"></i>
+                                <span class="notification-badge">3</span>
+                            </button>
+                            
+                            <div class="notifications-dropdown" id="notifications-dropdown">
+                                <div class="notifications-header">
+                                    <h3>الإشعارات</h3>
+                                    <button class="mark-all-read">تحديد الكل كمقروء</button>
+                                </div>
+                                <div class="notifications-list">
+                                    <div class="notification-item unread">
+                                        <div class="notification-icon">
+                                            <i class="fas fa-pills"></i>
+                                        </div>
+                                        <div class="notification-content">
+                                            <h4>تذكير بالدواء</h4>
+                                            <p>حان وقت أخذ دواء الضغط</p>
+                                            <span class="notification-time">منذ 5 دقائق</span>
+                                        </div>
+                                    </div>
+                                    <!-- More notifications... -->
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="header-profile">
+                            <button class="profile-btn" onclick="toggleProfileMenu()">
+                                <img src="assets/images/default-avatar.png" alt="صورة المستخدم" class="profile-avatar">
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            
+                            <div class="profile-dropdown" id="profile-dropdown">
+                                <div class="profile-info">
+                                    <img src="assets/images/default-avatar.png" alt="صورة المستخدم" class="dropdown-avatar">
+                                    <div class="user-details">
+                                        <h4>أحمد محمد</h4>
+                                        <p>ahmed@example.com</p>
+                                    </div>
+                                </div>
+                                <div class="profile-menu">
+                                    <a href="#" class="profile-menu-item">
+                                        <i class="fas fa-user"></i>
+                                        الملف الشخصي
+                                    </a>
+                                    <a href="#" class="profile-menu-item">
+                                        <i class="fas fa-cog"></i>
+                                        الإعدادات
+                                    </a>
+                                    <a href="#" class="profile-menu-item">
+                                        <i class="fas fa-question-circle"></i>
+                                        المساعدة
+                                    </a>
+                                    <hr class="profile-divider">
+                                    <a href="#" class="profile-menu-item" onclick="logout()">
+                                        <i class="fas fa-sign-out-alt"></i>
+                                        تسجيل الخروج
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+
+                <!-- Page Content -->
+                <div id="page-content" class="page-content">
+                    <!-- Dashboard content will be loaded here -->
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- JavaScript Files -->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/auth.js"></script>
+    <script src="assets/js/dashboard.js"></script>
+    <script src="assets/js/components.js"></script>
+</body>
+</html>
